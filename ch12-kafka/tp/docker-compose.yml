@@ -1,0 +1,72 @@
+
+services:
+  broker:
+    image: apache/kafka:4.1.0
+    container_name: broker
+    hostname : broker
+    ports:
+      - "9092:9092"  
+      - "29092:29092"
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_NODE_ID: 1
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
+      KAFKA_PROCESS_ROLES: broker,controller
+      KAFKA_CONTROLLER_QUORUM_VOTERS: 1@broker:29093
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+      KAFKA_CONTROLLER_LISTENER_NAMES: CONTROLLER
+      CLUSTER_ID: 4L6g3nShT-eMCtK--X86sw
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
+      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
+      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+      KAFKA_SHARE_COORDINATOR_STATE_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_SHARE_COORDINATOR_STATE_TOPIC_MIN_ISR: 1
+      KAFKA_LOG_DIRS: /tmp/kraft-combined-logs
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://broker:29092,PLAINTEXT_HOST://localhost:9092
+      KAFKA_LISTENERS: PLAINTEXT://broker:29092,CONTROLLER://broker:29093,PLAINTEXT_HOST://0.0.0.0:9092      
+    networks:
+      - kafka-net
+  webui:
+    image: ghcr.io/kafbat/kafka-ui:5f439f3
+    container_name: webui
+    ports:
+      - "8080:8080"
+    environment:
+      KAFKA_CLUSTERS_0_NAME: kafka
+      KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: broker:29092
+    networks:
+      - kafka-net
+  order_generator:
+    image: mathieu2525/org.etsmtl.ind500.tp3:latest
+    platform: linux/amd64
+    pull_policy: always
+    container_name: order_generator
+    depends_on:
+      - broker
+    command: java -jar DataGen.jar order docker
+    networks:
+      - kafka-net
+  transporter_generator:
+      image: mathieu2525/org.etsmtl.ind500.tp3:latest
+      platform: linux/amd64
+      pull_policy: always
+      container_name: transporter_generator
+      depends_on:
+        - broker
+      command: java -jar DataGen.jar transporter docker
+      networks:
+        - kafka-net
+  shipping_listener:
+    image: mathieu2525/org.etsmtl.ind500.tp3:latest
+    platform: linux/amd64
+    pull_policy: always
+    container_name: shipping_listener
+    depends_on:
+      - broker
+    command: java -jar DataGen.jar shipping docker
+    networks:
+      - kafka-net
+networks:
+  kafka-net:
+    driver: bridge

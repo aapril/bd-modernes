@@ -36,7 +36,7 @@ Pour les programmes Java, la commande `mvn -q compile` du dossier java doit se t
 
 ## 5. Charger les données
 
-Les sujets et les messages des sections 12.3 à 12.5 sont créés par les commandes et les programmes du chapitre. Le travail pratique de la section 12.8 utilise sa propre base de code, code.zip, qui contient son fichier docker-compose.yml et son générateur d’événements ; votre enseignant vous la remet, et le dossier tp du dépôt indique où la placer.
+Les sujets et les messages des sections 12.3 à 12.5 sont créés par les commandes et les programmes du chapitre. Le travail pratique de la section 12.8 utilise sa propre base de code, dans le dossier ch12-kafka/tp du dépôt : un projet Maven de départ et un fichier docker-compose.yml qui démarre un autre serveur Kafka et les générateurs d’événements. Arrêtez le serveur du chapitre (docker compose stop) avant de démarrer celui du travail pratique, car les deux utilisent le port 9092.
 ```
 cd java && mvn -q compile
 ```

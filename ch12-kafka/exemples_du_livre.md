@@ -25,7 +25,7 @@ Ce fichier reprend, dans l’ordre du chapitre, les blocs de code du livre « Le
        --bootstrap-server localhost:9092 --list
 ```
 
-> Les sujets et les messages des sections 12.3 à 12.5 sont créés par les commandes et les programmes du chapitre. Le travail pratique de la section 12.8 utilise sa propre base de code, code.zip, qui contient son fichier docker-compose.yml et son générateur d’événements ; votre enseignant vous la remet…
+> Les sujets et les messages des sections 12.3 à 12.5 sont créés par les commandes et les programmes du chapitre. Le travail pratique de la section 12.8 utilise sa propre base de code, dans le dossier ch12-kafka/tp du dépôt : un projet Maven de départ et un fichier docker-compose.yml qui démarre un au…
 
 ```
 % cd java && mvn -q compile

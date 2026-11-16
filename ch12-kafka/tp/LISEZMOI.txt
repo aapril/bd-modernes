@@ -1,2 +1,0 @@
-Placez ici le fichier code.zip du travail pratique de la section 12.8, remis par votre enseignant,
-puis décompressez-le : il contient son propre docker-compose.yml.
