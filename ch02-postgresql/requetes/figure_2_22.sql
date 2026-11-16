@@ -1,0 +1,1 @@
+SELECT temps_de_début FROM réservations res INNER JOIN membres mems ON mems.numéro_membre = res.numéro_membre WHERE mems.prénom='David' AND mems.nom_famille='Farrell' ORDER BY temps_de_début LIMIT 10;

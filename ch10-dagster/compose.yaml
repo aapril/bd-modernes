@@ -1,0 +1,10 @@
+# Chapitre 10, section 10.5.2 : PostgreSQL avec l'extension Citus (port 5435)
+services:
+  citus:
+    image: citusdata/citus:latest
+    platform: linux/amd64        # image offerte pour Intel seulement ; émulée sur puce Apple
+    container_name: citus
+    environment:
+      POSTGRES_PASSWORD: MotDePasse123
+    ports:
+      - "5435:5432"

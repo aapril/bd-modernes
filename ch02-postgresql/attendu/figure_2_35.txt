@@ -1,0 +1,2 @@
+numéro_activité|nom|coût_pour_membre|coût_pour_invités|mise_de_fonds_initiale|maintenance_mensuelle
+1|Terrain de Tennis 2|5|25|8000|200

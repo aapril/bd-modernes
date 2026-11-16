@@ -1,0 +1,10 @@
+numéro_activité|nom|maintenance_mensuelle
+0|Terrain de Tennis 1|200
+1|Terrain de Tennis 2|200
+2|Terrain de Badminton|50
+3|Table de PingPong|10
+4|Salle de Massage 1|3000
+5|Salle de Massage 2|3000
+6|Terrain de Squash|80
+7|Table de Snooker|15
+8|Table de Billard|15

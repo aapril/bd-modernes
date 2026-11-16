@@ -1,0 +1,1 @@
+SELECT mem.prénom AS pré_mem, mem.nom_famille AS nom_mem, res.prénom AS pré_res, res.nom_famille AS nom_res FROM membres mem LEFT OUTER JOIN membres res ON res.numéro_membre = mem.recommandé_par ORDER BY nom_mem, pré_mem LIMIT 10;

@@ -1,0 +1,7 @@
+# Chapitre 12 : courtier Kafka unique en mode KRaft
+services:
+  kafka:
+    image: apache/kafka:4.4.0
+    container_name: kafka
+    ports:
+      - "9092:9092"

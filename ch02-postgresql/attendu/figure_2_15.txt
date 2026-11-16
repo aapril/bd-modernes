@@ -1,0 +1,11 @@
+numéro_membre|nom_famille|prénom
+24|Sarwin|Ramnaresh
+26|Jones|Douglas
+27|Rumney|Henrietta
+28|Farrell|David
+29|Worthington-Smyth|Henry
+30|Purview|Millicent
+33|Tupperware|Hyacinth
+35|Hunt|John
+36|Crumpet|Erica
+37|Smith|Darren

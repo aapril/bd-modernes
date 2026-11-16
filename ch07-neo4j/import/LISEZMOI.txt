@@ -1,0 +1,1 @@
+Copiez ici les fichiers CSV du jeu de données Olist (voir README.md, étape 5).

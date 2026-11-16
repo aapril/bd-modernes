@@ -1,0 +1,21 @@
+# Résultats des scripts de vérification
+verification/resultats_*.txt
+verification/*.zip
+ch09-hbase/resultats_*.txt
+
+# Environnements et dépendances
+.venv/
+venv/
+__pycache__/
+*.pyc
+node_modules/
+target/
+.env
+
+# Fichiers téléchargés par les commandes du livre
+ch07-neo4j/import/*.csv
+ch07-neo4j/tp_levelDB_IND500/
+ch07-neo4j/Neo4j_projet/
+
+# Système
+.DS_Store

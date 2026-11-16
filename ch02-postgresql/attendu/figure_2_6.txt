@@ -1,0 +1,10 @@
+nom|coût_pour_membre
+Terrain de Tennis 1|5
+Terrain de Tennis 2|5
+Terrain de Badminton|0
+Table de PingPong|0
+Salle de Massage 1|35
+Salle de Massage 2|35
+Terrain de Squash|3.5
+Table de Snooker|0
+Table de Billard|0

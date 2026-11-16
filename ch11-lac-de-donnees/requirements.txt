@@ -1,0 +1,8 @@
+boto3>=1.35
+duckdb>=1.1
+pandas>=2.2
+pyarrow>=17
+s3fs>=2025.5
+fsspec>=2025.5
+psycopg[binary]>=3.2
+sqlalchemy>=2.0

@@ -1,0 +1,26 @@
+# Chapitre 2 : PostgreSQL 18 et pgAdmin 4 (réutilisés aux chapitres 3, 4, 10 et 11)
+# Démarrer : docker compose up -d     Arrêter : docker compose stop
+services:
+  postgres:
+    image: postgres:18
+    container_name: pg-club
+    environment:
+      POSTGRES_PASSWORD: MotDePasse123
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./donnees:/docker-entrypoint-initdb.d:ro
+      - ../ch03-acces-programme/donnees:/donnees:ro
+      - pgdata:/var/lib/postgresql
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: etudiant@exemple.com
+      PGADMIN_DEFAULT_PASSWORD: MotDePasse123
+    ports:
+      - "5050:80"
+    depends_on:
+      - postgres
+volumes:
+  pgdata:

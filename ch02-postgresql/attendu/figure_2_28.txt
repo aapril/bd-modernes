@@ -1,0 +1,6 @@
+lettre|nombre
+B|5
+C|2
+D|1
+F|2
+G|1

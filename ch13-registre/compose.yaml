@@ -1,0 +1,14 @@
+# Chapitre 13, section 13.6 : CouchDB 3
+services:
+  couchdb:
+    image: couchdb:3
+    container_name: couchdb
+    environment:
+      COUCHDB_USER: admin
+      COUCHDB_PASSWORD: MotDePasse123
+    ports:
+      - "5984:5984"
+    volumes:
+      - couchdata:/opt/couchdb/data
+volumes:
+  couchdata:

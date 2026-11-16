@@ -1,0 +1,16 @@
+# Chapitre 7 : Neo4j Community avec APOC
+services:
+  neo4j:
+    image: neo4j:2026-community
+    container_name: neo4j
+    environment:
+      NEO4J_AUTH: neo4j/MotDePasse123
+      NEO4J_PLUGINS: '["apoc"]'
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    volumes:
+      - ./import:/import
+      - neo4jdata:/data
+volumes:
+  neo4jdata:

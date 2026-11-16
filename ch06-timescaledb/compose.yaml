@@ -1,0 +1,14 @@
+# Chapitre 6 : PostgreSQL 18 et TimescaleDB (port 5433)
+services:
+  timescaledb:
+    image: timescale/timescaledb-ha:pg18
+    container_name: timescaledb
+    environment:
+      POSTGRES_PASSWORD: MotDePasse123
+    ports:
+      - "5433:5432"
+    volumes:
+      - ./init:/docker-entrypoint-initdb.d:ro
+      - tsdata:/home/postgres/pgdata
+volumes:
+  tsdata:

@@ -1,0 +1,11 @@
+pré_mem|nom_mem|pré_res|nom_res
+Florence|Bader|Ponder|Stibbons
+Anne|Baker|Ponder|Stibbons
+Timothy|Baker|Jemima|Farrell
+Tim|Boothe|Tim|Rownam
+Gerald|Butters|Darren|Smith
+Joan|Coplin|Timothy|Baker
+Erica|Crumpet|Tracy|Smith
+Nancy|Dare|Janice|Joplette
+David|Farrell||
+Jemima|Farrell||

@@ -1,0 +1,1 @@
+SELECT res.temps_de_début AS début, act.nom AS nom FROM activités act INNER JOIN réservations res ON act.numéro_activité = res.numéro_activité WHERE act.numéro_activité IN (0,1) AND res.temps_de_début >= '2023-09-01' AND res.temps_de_début < '2023-09-02' ORDER BY res.temps_de_début;

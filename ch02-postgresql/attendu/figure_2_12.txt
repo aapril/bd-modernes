@@ -1,0 +1,10 @@
+nom|coût
+Terrain de Tennis 1|chère
+Terrain de Tennis 2|chère
+Terrain de Badminton|économique
+Table de PingPong|économique
+Salle de Massage 1|chère
+Salle de Massage 2|chère
+Terrain de Squash|économique
+Table de Snooker|économique
+Table de Billard|économique
